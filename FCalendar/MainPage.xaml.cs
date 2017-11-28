@@ -26,5 +26,38 @@ namespace FCalendar
         {
             this.InitializeComponent();
         }
+    
+   
+       
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            DisplayLogin.IsPaneOpen = !DisplayLogin.IsPaneOpen;
+            if (DisplayLogin.IsPaneOpen)
+            {
+                Arrow.Content = "6";
+            }
+        }
+
+        private void Button_Click2(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        }
+        private void Button_Click3(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        }
+
+        private void GridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
+
+    
 }

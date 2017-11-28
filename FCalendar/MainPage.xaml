@@ -8,7 +8,132 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="357,357,0,0" VerticalAlignment="Top"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="97*"/>
+            <ColumnDefinition Width="45*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="54*"/>
+            <RowDefinition Height="203*"/>
+            <RowDefinition Height="13*"/>
+        </Grid.RowDefinitions>
+        <GridView Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" Width="450" Margin="20,0,30,0" >
+
+
+
+            <Border BorderThickness="3" BorderBrush="Black">
+                <StackPanel Height="769">
+                    <StackPanel.Background>
+                        <SolidColorBrush Color="#FF1B1919" Opacity="0.75"/>
+                    </StackPanel.Background>
+                    <Image Height="266" Width="auto" 
+                                    Stretch="UniformToFill" HorizontalAlignment="Center" Source="Assets/PIC/bar1.jpg" />
+                    <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="Bar1" Height="58" Width="103" />
+
+
+                    <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center">
+                        <Button Content=" Let's Go" Background="DarkRed" Foreground="AliceBlue" Width="432" />
+                    </Border>
+                    <Image Height="314" Width="auto" 
+                           Stretch="UniformToFill" HorizontalAlignment="Center" Source="Assets/PIC/bar2.jpg" />
+                    <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="Bar2" Height="58" Width="103" />
+
+
+                    <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center">
+                        <Button Content=" Let's Go" Background="DarkRed" Foreground="AliceBlue" Width="432" />
+                    </Border>
+                </StackPanel>
+            </Border>
+
+        </GridView>
+        <CalendarView Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" SelectionMode="Multiple" Height="546" Width="584" Margin="176,60,0,0"/>
+        <TextBlock Grid.Row="0" HorizontalAlignment="Center" FontSize="130" VerticalAlignment="Center" Width="1010" Height="211" Margin="465,0,445,5" FontFamily="Bradley Hand ITC" Foreground="#FF1A54A8" FontWeight="Bold" Grid.ColumnSpan="3" >
+            <Run Text="      "/>
+            <Run Text="GoingOut"/>
+        </TextBlock>
+        <SplitView Name="DisplayLogin" DisplayMode="Overlay" FlowDirection="RightToLeft" IsPaneOpen="False" Grid.Column="2" HorizontalAlignment="Right" Margin="0,0,0,0"  Width="444">
+            <SplitView.PaneBackground>
+                <SolidColorBrush Color="Transparent"/>
+            </SplitView.PaneBackground>
+            <SplitView.Pane>
+                <StackPanel Width="324" Height="auto" Margin="0,35,0,0" HorizontalAlignment="Center" >
+                    <Border  BorderBrush="Black" BorderThickness="3" Margin="0,0,22,0">
+                        <Button x:Name="Login" Content="Customer" Foreground="White"  FontSize="27" Click="Button_Click2"  Height="42" Width="302" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-3,0">
+                            <Button.Background>
+                                <SolidColorBrush Color="#FF1B1919" Opacity="0.75"/>
+                            </Button.Background>
+                        </Button>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="3" Margin="0,0,22,0">
+                        <Button x:Name="Host" Content="Host" Foreground="White" FontSize="27" Click="Button_Click3" Height="42" Width="296.951" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-2,0,1.049,0" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                            <Button.RenderTransform>
+                                <CompositeTransform Rotation="-0.699"/>
+                            </Button.RenderTransform>
+                            <Button.Background>
+                                <SolidColorBrush Color="#FF1B1919" Opacity="0.75"/>
+                            </Button.Background>
+                        </Button>
+                    </Border>
+                </StackPanel>
+            </SplitView.Pane>
+            <Grid Margin="-10,0,0,0"/>
+        </SplitView>
+        <Border BorderBrush="CornflowerBlue" BorderThickness="3" Grid.Column="2" VerticalAlignment="Top" Height="36">
+            <Border.Background>
+                <SolidColorBrush Color="DarkBlue" Opacity="0.75"/>
+            </Border.Background>
+            <TextBlock Text="User" Margin="0,0,0,0" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="3" Grid.Column="2" Width="44" VerticalAlignment="Top" HorizontalAlignment="Right" Height="36" Margin="0,0,0,0">
+            <Button x:Name="Arrow" Content="5" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" FontFamily="Webdings"  Foreground="White" RenderTransformOrigin="0.5,0.5" Click="Button_Click_1">
+                <Button.RenderTransform>
+                    <CompositeTransform Rotation="180"/>
+                </Button.RenderTransform>
+                <Button.Background>
+                    <SolidColorBrush Color="#FF1B1919" Opacity="0.75"/>
+                </Button.Background>
+            </Button>
+        </Border>
+        <SplitView Name="CopenhagenCity" DisplayMode="Overlay" IsPaneOpen="False" Grid.Column="2" Grid.Row="1" >
+            <SplitView.PaneBackground>
+                <SolidColorBrush Color="Transparent"/>
+            </SplitView.PaneBackground>
+            <SplitView.Pane>
+                <StackPanel Width="300" HorizontalAlignment="Left" Margin="0,75,0,0" >
+                    <Border BorderBrush="Black" BorderThickness="3">
+                        <Button x:Name="CopenhagenN" Content="Copenhagen N" Foreground="White" FontSize="40"  FontFamily="Trebuchet MS" Height="70" Width="297" Margin="0,0,-3,0">
+                            <Button.Background>
+                                <SolidColorBrush Color="CornflowerBlue" Opacity="0.75"/>
+                            </Button.Background>
+                        </Button>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="3">
+                        <Button x:Name="CopenhagenS" Content="Copenhagen S" Foreground="White" FontSize="40" FontFamily="Trebuchet MS" Height="70" Width="297" Margin="0,0,-3,0">
+                            <Button.Background>
+                                <SolidColorBrush Color="CornflowerBlue" Opacity="0.75"/>
+                            </Button.Background>
+                        </Button>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="3">
+                        <Button x:Name="CopenhagenH" Content="Copenhagen H" Foreground="White" FontSize="40" FontFamily="Trebuchet MS" Height="70" Width="300">
+                            <Button.Background>
+                                <SolidColorBrush Color="CornflowerBlue" Opacity="0.75"/>
+                            </Button.Background>
+                        </Button>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="3">
+                        <Button x:Name="CopenhagenE" Content="Copenhagen E"  Foreground="White" FontSize="40" FontFamily="Trebuchet MS" Height="70" Width="300">
+                            <Button.Background>
+                                <SolidColorBrush Color="CornflowerBlue" Opacity="0.75"/>
+                            </Button.Background>
+                        </Button>
+
+                    </Border>
+                </StackPanel>
+            </SplitView.Pane>
+        </SplitView>
 
     </Grid>
 </Page>

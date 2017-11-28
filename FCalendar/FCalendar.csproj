@@ -111,6 +111,30 @@
     <None Include="FCalendar_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\PIC\bar1.jpg" />
+    <Content Include="Assets\PIC\bar2.jpg" />
+    <Content Include="Assets\PIC\bar3.jpg" />
+    <Content Include="Assets\PIC\bar4.jpg" />
+    <Content Include="Assets\PIC\bar5.jpg" />
+    <Content Include="Assets\PIC\concert1.jpg" />
+    <Content Include="Assets\PIC\concert2.jpg" />
+    <Content Include="Assets\PIC\concert3.jpg" />
+    <Content Include="Assets\PIC\concert4.jpg" />
+    <Content Include="Assets\PIC\concert5.jpg" />
+    <Content Include="Assets\PIC\concert6.jpg" />
+    <Content Include="Assets\PIC\res1.jpg" />
+    <Content Include="Assets\PIC\res2.jpeg" />
+    <Content Include="Assets\PIC\res3.jpg" />
+    <Content Include="Assets\PIC\res4.jpg" />
+    <Content Include="Assets\PIC\res5.jpg" />
+    <Content Include="Assets\PIC\res6.jpg" />
+    <Content Include="Assets\PIC\th1.jpg" />
+    <Content Include="Assets\PIC\th2.jpg" />
+    <Content Include="Assets\PIC\th3.jpg" />
+    <Content Include="Assets\PIC\th4.jpg" />
+    <Content Include="Assets\PIC\th5.jpg" />
+    <Content Include="Assets\PIC\th6.jpg" />
+    <Content Include="Assets\PIC\th7.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
