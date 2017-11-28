@@ -29,7 +29,7 @@
                         <SolidColorBrush Color="#FF1B1919" Opacity="0.75"/>
                     </StackPanel.Background>
                     <Image Height="266" Width="auto" 
-                                    Stretch="UniformToFill" HorizontalAlignment="Center" Source="Assets/PIC/bar1.jpg" />
+                                    Stretch="UniformToFill" HorizontalAlignment="Center" Source="ms-appx:///Assets/PIC/bar1.jpg"  />
                     <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="Bar1" Height="58" Width="103" />
 
 
@@ -37,7 +37,7 @@
                         <Button Content=" Let's Go" Background="DarkRed" Foreground="AliceBlue" Width="432" />
                     </Border>
                     <Image Height="314" Width="auto" 
-                           Stretch="UniformToFill" HorizontalAlignment="Center" Source="Assets/PIC/bar2.jpg" />
+                           Stretch="UniformToFill" HorizontalAlignment="Center" Source="ms-appx:///Assets/PIC/bar2.jpg" />
                     <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="Bar2" Height="58" Width="103" />
 
 
