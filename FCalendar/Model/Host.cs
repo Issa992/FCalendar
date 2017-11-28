@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FCalendar.Model
 {
-    class Host
+    public class Host
     {
         string CPR;
         string Name;
@@ -19,13 +19,17 @@ namespace FCalendar.Model
         bool IsRecomendet;
         string ShortDescription;
         
-        public Host(string CPR, string Name, string Mail, string password)
+        public Host(string cpr, string name, string Mail, string password)
         {
-
+            HashedPassword = Tools.HashPassword(password);
+            CPR = cpr;
+            Name = name;
         }
         public Host()
         {
-            HashedPassword = TempPassword;
+
+            HashedPassword = Tools.HashPassword(TempPassword);
+            TempPassword = null;
         }
     }
 }
