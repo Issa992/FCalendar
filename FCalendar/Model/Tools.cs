@@ -7,6 +7,7 @@ using System.Security.Cryptography;
 using Windows.Security.Cryptography.Core;
 using Windows.Security.Cryptography;
 using Windows.Storage.Streams;
+using Newtonsoft.Json;
 using Windows.Storage;
 using System.Collections.ObjectModel;
 
@@ -19,6 +20,9 @@ namespace FCalendar.Model
         public static StorageFile EventList;
         public static StorageFile HostList;
         public static StorageFile AdminList;
+        public static string TempStringHost;
+        public static string TempStringEvent;
+        public static string TempStringAdmin;
         public static string HashPassword(string toBeHashed)
         {
             {
@@ -37,14 +41,50 @@ namespace FCalendar.Model
             }
             else return false;
         }
-        public async void AddLog (string log)
+        public static async void AddLog(string log)
         {
-            logfile = await folder.CreateFileAsync("Logfile.text",   CreationCollisionOption.OpenIfExists);
+            logfile = await folder.CreateFileAsync("Logfile.text", CreationCollisionOption.OpenIfExists);
             await FileIO.WriteTextAsync(logfile, log);
         }
-        async void SaveHostsToFile (ObservableCollection<Host> events)
-        {   
-
+        static async void SaveHostsToFile(ObservableCollection<Host> hostslist)
+        {
+            string json = JsonConvert.SerializeObject(hostslist, Formatting.Indented);
+            HostList = await folder.CreateFileAsync("HostsList.json", CreationCollisionOption.ReplaceExisting);
+            await FileIO.WriteTextAsync(HostList, json);
         }
+        private static async void GetHostsStringFromJson ()
+        {
+            //HostList = await folder.CreateFileAsync("HostsList.json", CreationCollisionOption.OpenIfExists);
+            string json = await FileIO.ReadTextAsync(HostList);
+            TempStringHost = json;
+        }
+        public static ObservableCollection<Host> GetHostListFromFile()
+        {
+            GetHostsStringFromJson();
+            ObservableCollection<Host> returnedlist;
+            returnedlist = JsonConvert.DeserializeObject<ObservableCollection<Host>>(TempStringHost);
+            return returnedlist;
+        }
+
+        static async void SaveAdminToFile(ObservableCollection<Admin> adminlist)
+        {
+            string json = JsonConvert.SerializeObject(adminlist, Formatting.Indented);
+            AdminList = await folder.CreateFileAsync("AdminList.json", CreationCollisionOption.ReplaceExisting);
+            await FileIO.WriteTextAsync(AdminList, json);
+        }
+        private static async void GetAdminsStringFromJson()
+        {
+            //HostList = await folder.CreateFileAsync("HostsList.json", CreationCollisionOption.OpenIfExists);
+            string json = await FileIO.ReadTextAsync(AdminList);
+            TempStringAdmin = json;
+        }
+        public static ObservableCollection<Admin> GetAdminListFromFile()
+        {
+            GetAdminsStringFromJson();
+            ObservableCollection<Admin> returnedlist;
+            returnedlist = JsonConvert.DeserializeObject<ObservableCollection<Admin>>(TempStringAdmin);
+            return returnedlist;
+        }
+
     }
 }

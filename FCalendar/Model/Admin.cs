@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FCalendar.Model
 {
-    class Admin
+    public class Admin
     {
         string Login;
         string HashedPassword;
