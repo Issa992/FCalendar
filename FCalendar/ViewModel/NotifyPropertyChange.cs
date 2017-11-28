@@ -9,7 +9,7 @@ using FCalendar.Annotations;
 
 namespace FCalendar.ViewModel
 {
-	public class NotifyChangePropertyClass:INotifyPropertyChanged
+	public class NotifyPropertyChange : INotifyPropertyChanged
 	{
 		public event PropertyChangedEventHandler PropertyChanged;
 
