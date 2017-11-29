@@ -105,12 +105,8 @@
                 </Button.Background>
             </Button>
         </Border>
-        <SplitView Name="MySplitView" DisplayMode="Overlay" IsPaneOpen="False" Grid.Row="1" Grid.Column="2" >
-            <SplitView.PaneBackground>
-                <SolidColorBrush Color="Transparent"/>
-            </SplitView.PaneBackground>
-            <SplitView.Pane>
-                <StackPanel Width="300" HorizontalAlignment="Left"  >
+   
+                <StackPanel Width="300" HorizontalAlignment="Left" Grid.Column="2" Grid.Row="1" >
                     <Border BorderBrush="Black" BorderThickness="3">
                         <Button x:Name="CopenhagenN" Content="Copenhagen N"  Foreground="White" FontSize="40"  FontFamily="Trebuchet MS" Height="70" Width="300">
                             <Button.Background>
@@ -140,16 +136,14 @@
                         </Button>
 
                     </Border>
-                </StackPanel>
-            </SplitView.Pane>
-        </SplitView>
+            <Maps:MapControl Height="506" RenderTransformOrigin="0.516,0.498" Background="#FF7A1313" />
+        </StackPanel>
+     
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="0,45,0,0" TextWrapping="Wrap" Text="Out &amp; About" VerticalAlignment="Top" Width="577" Height="100" FontSize="72" TextAlignment="Center" FontFamily="Sitka Text">
             <TextBlock.Foreground>
                 <SolidColorBrush Color="{ThemeResource SystemAltMediumColor}"/>
             </TextBlock.Foreground>
         </TextBlock>
-
-
 
 
 
