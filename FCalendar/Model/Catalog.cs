@@ -17,11 +17,17 @@ namespace FCalendar.Model
         private ObservableCollection<Host> FiltredHostList;
         private ObservableCollection<Host> FiltredEventList;
 
+        
 
         public Catalog()
         {
-            
+          
+          
+
+
         }
+        
+       
 
         public void FiltrHostByRecommended(){}
         public void FiltrHostByIsVerified(){}
