@@ -9,9 +9,9 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="15*"/>
-            <ColumnDefinition Width="34*"/>
-            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="199*"/>
+            <ColumnDefinition Width="536*"/>
+            <ColumnDefinition Width="225*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -26,7 +26,7 @@
 
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="0,45,0,0" TextWrapping="Wrap" Text="Out &amp; About" VerticalAlignment="Top" Width="577" Height="100" FontSize="72" TextAlignment="Center" FontFamily="Sitka Text"/>
 
-        <Button HorizontalAlignment="Center" Height="59" Margin="32,10,309,152" VerticalAlignment="Center" Width="109"  Background="#00000000" Click="Button_Click5">
+        <Button HorizontalAlignment="Center" Height="59" Margin="6,10,283,152" VerticalAlignment="Center" Width="109"  Background="#00000000" Click="Button_Click5">
             <StackPanel>
                 <Image Height="55" Source="ms-appx:///Assets/arrow.png" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" Width="98.99" d:LayoutRounding="Auto" HorizontalAlignment="Left" Margin="0,0,-9.99,0">
                     <Image.RenderTransform>
@@ -36,17 +36,63 @@
 
             </StackPanel>
         </Button>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" Text="Welcome to the Admin Page." VerticalAlignment="Top" Height="76" Width="680" FontSize="36" TextAlignment="Center" FontFamily="MV Boli" Foreground="DarkRed"/>
-        <ListView Background="WhiteSmoke" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" 
-                  Height="500" Margin="53,112,65,124" Width="332" />
-        <Button Content=" Edit" Background="DarkRed" Foreground="AliceBlue" Margin="633,169,0,526" Grid.Row="1" Width="315" 
-                FontSize="20" Height="41" Grid.Column="1"/>
-        <Button Content=" Add" Background="DarkRed" Foreground="AliceBlue" 
-                Grid.Column="1" Margin="633,293,0,402" Grid.Row="1" Width="315" 
-                FontSize="20" Height="41"/>
-        <Button Content=" Delet" Background="DarkRed" Foreground="AliceBlue" 
-                Grid.Column="1" Margin="633,445,0,250" Grid.Row="1" Width="315" 
-                FontSize="20" Height="41"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" Text="Welcome to the Admin Page." VerticalAlignment="Top" Height="76" Width="680" FontSize="36" TextAlignment="Center" FontFamily="MV Boli" Foreground="DarkRed" Margin="196,0"/>
+        <GridView Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Width="1052" Margin="10,81,10,0" >
+
+
+            <Border BorderThickness="3" BorderBrush="Black" Width="auto">
+                <StackPanel Height="776" Margin="67,0,57,0">
+                    <StackPanel.Background>
+                        <SolidColorBrush Color="#FF1B1919" Opacity="0.75"/>
+                    </StackPanel.Background>
+                    <Image Height="228" Width="auto" 
+                                    Stretch="UniformToFill" HorizontalAlignment="Center" Source="ms-appx:///Assets/PIC/bar1.jpg"  />
+                    <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="Bar1" Height="58" Width="103" />
+                    <TextBox Height="104" Text="Wine night event " Margin="88,0,144,0"/>
+
+
+                    <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center" Height="42">
+                        <Button Content=" Edit" Background="DarkRed" Foreground="AliceBlue" Width="432" />
+
+                    </Border>
+                    <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center" Height="42">
+                        <Button Content=" Delete" Background="DarkRed" Foreground="AliceBlue" Width="432" />
+
+                    </Border>
+                    <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center" Height="42">
+                        <Button Content=" Add" Background="DarkRed" Foreground="AliceBlue" Width="432" />
+
+                    </Border>
+                    <Border BorderThickness="3" BorderBrush="Black">
+                        <StackPanel Height="Auto">
+                            <StackPanel.Background>
+                                <SolidColorBrush Color="#FF1B1919" Opacity="0.75"/>
+                            </StackPanel.Background>
+                            <Image Height="228" Width="auto" 
+                                   Stretch="UniformToFill" HorizontalAlignment="Center" Source="ms-appx:///Assets/PIC/bar1.jpg"  />
+                            <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="Bar1" Height="58" Width="103" />
+                            <TextBox Height="104" Text="Wine night event "/>
+
+
+                            <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center" Height="42">
+                                <Button Content=" Edit" Background="DarkRed" Foreground="AliceBlue" Width="432" />
+
+                            </Border>
+                            <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center" Height="42">
+                                <Button Content=" Delete" Background="DarkRed" Foreground="AliceBlue" Width="432" />
+
+                            </Border>
+                            <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center" Height="42">
+                                <Button Content=" Add" Background="DarkRed" Foreground="AliceBlue" Width="432" />
+
+                            </Border>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </Border>
+
+        </GridView>
 
     </Grid>
+
 </Page>

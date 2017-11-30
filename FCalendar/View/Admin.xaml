@@ -27,27 +27,29 @@
 
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="0,45,0,0" TextWrapping="Wrap" Text="Out &amp; About" VerticalAlignment="Top" Width="577" Height="100" FontSize="72" TextAlignment="Center" FontFamily="Sitka Text"/>
 
-        <Button HorizontalAlignment="Center" Height="59" Margin="32,10,309,152" VerticalAlignment="Center" Width="109"  Background="#00000000" Click="Button_Click6">
+        <Button HorizontalAlignment="Center" Height="149" Margin="32,62,121,10" VerticalAlignment="Center" Width="297"  Background="#00000000" Click="Button_Click6">
             <StackPanel>
-                <Image Height="55" Source="ms-appx:///Assets/arrow.png" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" Width="98.99" d:LayoutRounding="Auto" HorizontalAlignment="Left" Margin="0,0,-9.99,0">
+                <Image Height="131.773" Source="ms-appx:///Assets/arrow.png" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" Width="214.293" d:LayoutRounding="Auto" HorizontalAlignment="Left" Margin="-72.63,0,-52.663,0">
                     <Image.RenderTransform>
-                        <CompositeTransform Rotation="358.783"/>
+                        <CompositeTransform Rotation="360.483"/>
                     </Image.RenderTransform>
                 </Image>
 
 
             </StackPanel>
         </Button>
+        <RelativePanel Grid.Column="1" Margin="0,0,10,0" Grid.Row="1">
+            <TextBlock TextWrapping="Wrap" Text="eMail:" FontSize="20" FontWeight="Bold" Height="35" Margin="166,112,699,589"/>
+            <TextBox HorizontalAlignment="Left" Margin="447,176,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="33" Width="325"/>
+            <TextBlock TextWrapping="Wrap" Text="Password:" FontSize="20" FontWeight="Bold" Height="35" Margin="166,176,699,525"/>
+            <TextBox TextWrapping="Wrap" Grid.Column="1" Grid.Row="1" Margin="445.452,108.259,-775.301,-108.259" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <TextBox.RenderTransform>
+                    <CompositeTransform Rotation="-0.277"/>
+                </TextBox.RenderTransform>
+            </TextBox>
+            <Button Content=" Log In" Background="DarkRED" Foreground="AliceBlue" 
+                FontSize="20" Click="Button_Click" Grid.Column="1" Grid.Row="1" Margin="166,395,-268,-395" Width="183"/>
 
-
-       
-
-        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="192,193,0,0" Grid.Row="1" TextWrapping="Wrap" Text="eMail:" VerticalAlignment="Top" Width="115" FontSize="20" FontWeight="Bold"/>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="192,287,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Width="115" FontSize="20" FontWeight="Bold"/>
-        <TextBox   Grid.Column="1" HorizontalAlignment="Left" Margin="355,193,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Height="32" Width="315"/>
-        <TextBox   Grid.Column="1" HorizontalAlignment="Left" Margin="355,287,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="315"/>
-        <Button Content=" Log In" Background="DarkRED" Foreground="AliceBlue" 
-                 Grid.Column="1" Margin="355,423,0,272" Grid.Row="1" Width="315" 
-                FontSize="20" Height="41"/>
+        </RelativePanel>
     </Grid>
 </Page>
