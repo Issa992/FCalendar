@@ -96,9 +96,14 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Admin.cs" />
-    <Compile Include="Model\CoordinateConverter.cs" />
     <Compile Include="Model\Event.cs" />
     <Compile Include="Model\Tools.cs" />
+    <Compile Include="View\Admin.xaml.cs">
+      <DependentUpon>Admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminPage.xaml.cs">
+      <DependentUpon>AdminPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -112,6 +117,8 @@
     <None Include="FCalendar_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\arrow.png" />
+    <Content Include="Assets\back arrow.png" />
     <Content Include="Assets\PIC\bar1.jpg" />
     <Content Include="Assets\PIC\bar2.jpg" />
     <Content Include="Assets\PIC\bar3.jpg" />
@@ -151,6 +158,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="View\Admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AdminPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

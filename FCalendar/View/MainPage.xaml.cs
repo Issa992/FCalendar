@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using FCalendar.View;
+using Admin = FCalendar.Model.Admin;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -41,7 +43,7 @@ namespace FCalendar
 
         private void Button_Click2(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage));
+            Frame.Navigate(typeof(View.Admin));
         }
         private void Button_Click3(object sender, RoutedEventArgs e)
         {
