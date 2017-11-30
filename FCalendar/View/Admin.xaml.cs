@@ -29,7 +29,8 @@ namespace FCalendar.View
 
         private void Button_Click6(object sender, RoutedEventArgs routedEventArgs)
         {
-            Frame.Navigate(typeof(MainPage));
+            Frame.Navigate
+                (typeof(MainPage));
         }
     }
 }

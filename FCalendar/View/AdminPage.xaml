@@ -37,6 +37,16 @@
             </StackPanel>
         </Button>
         <TextBlock Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" Text="Welcome to the Admin Page." VerticalAlignment="Top" Height="76" Width="680" FontSize="36" TextAlignment="Center" FontFamily="MV Boli" Foreground="DarkRed"/>
-        
+        <ListView Background="WhiteSmoke" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" 
+                  Height="500" Margin="53,112,65,124" Width="332" />
+        <Button Content=" Edit" Background="DarkRed" Foreground="AliceBlue" Margin="633,169,0,526" Grid.Row="1" Width="315" 
+                FontSize="20" Height="41" Grid.Column="1"/>
+        <Button Content=" Add" Background="DarkRed" Foreground="AliceBlue" 
+                Grid.Column="1" Margin="633,293,0,402" Grid.Row="1" Width="315" 
+                FontSize="20" Height="41"/>
+        <Button Content=" Delet" Background="DarkRed" Foreground="AliceBlue" 
+                Grid.Column="1" Margin="633,445,0,250" Grid.Row="1" Width="315" 
+                FontSize="20" Height="41"/>
+
     </Grid>
 </Page>
