@@ -110,7 +110,7 @@
                 <SolidColorBrush Color="Transparent"/>
             </SplitView.PaneBackground>
             <SplitView.Pane>
-                <StackPanel Width="300" HorizontalAlignment="Left"  >
+                <StackPanel>
                     <Border BorderBrush="Black" BorderThickness="3">
                         <Button x:Name="CopenhagenN" Content="Copenhagen N"  Foreground="White" FontSize="40"  FontFamily="Trebuchet MS" Height="70" Width="300">
                             <Button.Background>
